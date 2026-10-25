@@ -1,0 +1,25 @@
+{
+  "source": "config/catalogs/bitext-v1.json",
+  "merges": {
+    "refund.policy": [
+      "refund.policy",
+      "refund.eligibility",
+      "refund.money_back_guarantee"
+    ],
+    "account.update": [
+      "account.update",
+      "account.update_user_information"
+    ],
+    "order.modify": [
+      "order.modify",
+      "order.add_item",
+      "order.remove_item",
+      "order.swap_item"
+    ],
+    "account.early_exit_fee": [
+      "account.early_exit_fee",
+      "payment.cancellation_charge"
+    ]
+  },
+  "entries": 33
+}

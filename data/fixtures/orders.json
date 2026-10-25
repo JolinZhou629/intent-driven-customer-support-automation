@@ -1,0 +1,5 @@
+[
+  {"order_number":"ORD-1001","order_status":"shipped","estimated_delivery":"2026-10-03","eligible_for_refund":true},
+  {"order_number":"ORD-1002","order_status":"processing","estimated_delivery":"2026-10-08","eligible_for_refund":true},
+  {"order_number":"ORD-1003","order_status":"delivered","estimated_delivery":"2026-09-20","eligible_for_refund":false}
+]

@@ -1,0 +1,38 @@
+{
+  "bundle_version": "classifier-v2",
+  "catalog_version": "bitext-v2",
+  "model_type": "tfidf_linear_svm",
+  "routing_policy_version": "routing-v1",
+  "files": [
+    {
+      "path": "model.joblib",
+      "sha256": "50a90bf8b7af817211f1a662b649e12ad8e9e68b8459af827db19e0e6d551944",
+      "bytes": 1333808
+    },
+    {
+      "path": "catalog.json",
+      "sha256": "424c39db16ceeee2e65c13d0a7b002405f880fca544f3d315b3f6ea09a654fd8",
+      "bytes": 22448
+    },
+    {
+      "path": "catalog-provenance.json",
+      "sha256": "9c09634a8024716f6d42722244bdae37197d9a5cf01d72d9482fc1bc13bd1dc9",
+      "bytes": 529
+    },
+    {
+      "path": "routing.yaml",
+      "sha256": "c03b370fc190bd0fdb5d9fc2d84f17c2bff5b825e3c0c62531eea64097103ff9",
+      "bytes": 625
+    },
+    {
+      "path": "calibration.json",
+      "sha256": "af1e7896a601c3e99a003355ea614d28cb84dd66415bd7ff85e7eafe89c42855",
+      "bytes": 1941
+    },
+    {
+      "path": "merge-map.yaml",
+      "sha256": "dd5da3c7dc6d1c9b32fc73d17b2fe2262dbb3fb1c6ed6f3f5c91a092c4e42a3e",
+      "bytes": 698
+    }
+  ]
+}

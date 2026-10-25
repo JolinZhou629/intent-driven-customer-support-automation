@@ -1,0 +1,4 @@
+[
+  {"refund_reference":"REF-1001","refund_status":"processed","amount":"25.00","order_number":"ORD-1001"},
+  {"refund_reference":"REF-1002","refund_status":"pending","amount":"40.00","order_number":"ORD-1002"}
+]
