@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500"><rect width="100%" height="100%" fill="white"/><text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Multiclass one-vs-rest ROC-AUC</text><text x="400" y="65" text-anchor="middle" font-size="12">Only the 30 classes present in each split are included</text>
+<rect x="112" y="399.1" width="24" height="10.9" fill="#5b8db8"/>
+<text x="124" y="392.1" text-anchor="middle" font-size="11">0.986</text>
+<rect x="144" y="395.7" width="24" height="14.3" fill="#d97745"/>
+<text x="156" y="388.7" text-anchor="middle" font-size="11">0.998</text>
+<text x="140" y="445" text-anchor="middle" font-size="12">Logistic regression</text>
+<rect x="332" y="399.7" width="24" height="10.3" fill="#5b8db8"/>
+<text x="344" y="392.7" text-anchor="middle" font-size="11">0.984</text>
+<rect x="364" y="395.3" width="24" height="14.7" fill="#d97745"/>
+<text x="376" y="388.3" text-anchor="middle" font-size="11">0.999</text>
+<text x="360" y="445" text-anchor="middle" font-size="12">Linear SVM</text>
+<rect x="552" y="401.0" width="24" height="9.0" fill="#5b8db8"/>
+<text x="564" y="394.0" text-anchor="middle" font-size="11">0.980</text>
+<rect x="584" y="396.3" width="24" height="13.7" fill="#d97745"/>
+<text x="596" y="389.3" text-anchor="middle" font-size="11">0.996</text>
+<text x="580" y="445" text-anchor="middle" font-size="12">DistilBERT</text>
+<line x1="80" y1="410" x2="700" y2="410" stroke="#555"/>
+<rect x="260" y="470" width="14" height="14" fill="#5b8db8"/><text x="280" y="482" font-size="12">Development</text><rect x="390" y="470" width="14" height="14" fill="#d97745"/><text x="410" y="482" font-size="12">Calibration</text>
+</svg>

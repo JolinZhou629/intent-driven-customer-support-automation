@@ -1,0 +1,55 @@
+flowchart TD
+  T[Incoming support ticket] --> V[Validate input and load session]
+  V --> C[bitext-v2 classifier]
+  C --> H[Classifier handoff\nintent, domain, confidence, margin]
+  H --> R{Deterministic routing policy}
+
+  R -->|Low confidence or missing information| CL[Clarify\nask question and save state]
+  CL --> SS[(Session state store)]
+  SS -. user follow-up .-> V
+
+  R -->|Unsupported request or policy boundary| ES[Escalate\nrecord reason and hand off]
+  ES --> AU[(Audit log)]
+
+  R -->|Accepted intent| SR[Skill registry]
+  SR --> SK[Select versioned skill]
+  SK --> PC{Check preconditions\nand required entities}
+  PC -->|Missing entity| CL
+  PC -->|Precondition failed| ES
+  PC -->|Ready| TR[Tool registry]
+
+  TR --> AL[Allowlist and permission check]
+  AL -->|Rejected| ES
+  AL -->|Permitted| TL[Typed simulated tool]
+  TL --> RES{Tool result}
+  RES -->|Success| EV[Validate structured evidence]
+  RES -->|Failure| RT{Retry limit reached?}
+  RT -->|No| TL
+  RT -->|Yes| ES
+
+  EV --> GR[Grounded response template]
+  GR --> AU
+  EV --> SS
+  SS --> OUT[Reply or workflow completion]
+
+  subgraph Skills[Project skills]
+    S1[Order status]
+    S2[Refund status]
+    S3[Invoice retrieval]
+    S4[Delivery-address change]
+  end
+  SR --- S1
+  SR --- S2
+  SR --- S3
+  SR --- S4
+
+  subgraph Tools[Project-created simulated tools]
+    T1[lookup_order]
+    T2[lookup_refund]
+    T3[retrieve_invoice]
+    T4[validate_delivery_address]
+  end
+  TL --- T1
+  TL --- T2
+  TL --- T3
+  TL --- T4

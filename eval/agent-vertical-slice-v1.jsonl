@@ -1,0 +1,9 @@
+{"id":"order-status-success","intent_id":"order.status","domain_id":"order","decision":"handle","entities":{"order_number":"ORD-1001"},"expected_status":"completed"}
+{"id":"order-status-clarify","intent_id":"order.status","domain_id":"order","decision":"handle","entities":{},"expected_status":"waiting_for_user"}
+{"id":"order-status-not-found","intent_id":"order.status","domain_id":"order","decision":"handle","entities":{"order_number":"ORD-9999"},"expected_status":"escalated"}
+{"id":"unknown-request","intent_id":null,"domain_id":null,"decision":"escalate","entities":{},"expected_status":"escalated"}
+{"id":"refund-status-success","intent_id":"refund.status","domain_id":"refund","decision":"handle","entities":{"refund_reference":"REF-1001"},"expected_status":"completed"}
+{"id":"refund-status-clarify","intent_id":"refund.status","domain_id":"refund","decision":"handle","entities":{},"expected_status":"waiting_for_user"}
+{"id":"invoice-retrieval-success","intent_id":"invoice.retrieve","domain_id":"invoice","decision":"handle","entities":{"invoice_reference":"INV-1001"},"expected_status":"completed"}
+{"id":"delivery-address-success","intent_id":"delivery.address_change","domain_id":"delivery","decision":"handle","entities":{"order_number":"ORD-1002","new_address":"10 Example Road"},"expected_status":"completed"}
+{"id":"delivery-address-not-allowed","intent_id":"delivery.address_change","domain_id":"delivery","decision":"handle","entities":{"order_number":"ORD-1001","new_address":"10 Example Road"},"expected_status":"escalated"}

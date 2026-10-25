@@ -1,0 +1,79 @@
+{
+  "calibration_resolved": 180,
+  "teacher_abstentions": 20,
+  "selected": {
+    "margin_threshold": 0.2,
+    "accepted": 176,
+    "coverage": 0.9777777777777777,
+    "accepted_accuracy": 0.9545454545454546
+  },
+  "grid": [
+    {
+      "margin_threshold": 0.0,
+      "accepted": 180,
+      "coverage": 1.0,
+      "accepted_accuracy": 0.9388888888888889
+    },
+    {
+      "margin_threshold": 0.05,
+      "accepted": 180,
+      "coverage": 1.0,
+      "accepted_accuracy": 0.9388888888888889
+    },
+    {
+      "margin_threshold": 0.1,
+      "accepted": 177,
+      "coverage": 0.9833333333333333,
+      "accepted_accuracy": 0.9491525423728814
+    },
+    {
+      "margin_threshold": 0.15,
+      "accepted": 177,
+      "coverage": 0.9833333333333333,
+      "accepted_accuracy": 0.9491525423728814
+    },
+    {
+      "margin_threshold": 0.2,
+      "accepted": 176,
+      "coverage": 0.9777777777777777,
+      "accepted_accuracy": 0.9545454545454546
+    },
+    {
+      "margin_threshold": 0.25,
+      "accepted": 176,
+      "coverage": 0.9777777777777777,
+      "accepted_accuracy": 0.9545454545454546
+    },
+    {
+      "margin_threshold": 0.3,
+      "accepted": 174,
+      "coverage": 0.9666666666666667,
+      "accepted_accuracy": 0.9597701149425287
+    },
+    {
+      "margin_threshold": 0.4,
+      "accepted": 171,
+      "coverage": 0.95,
+      "accepted_accuracy": 0.9590643274853801
+    },
+    {
+      "margin_threshold": 0.5,
+      "accepted": 170,
+      "coverage": 0.9444444444444444,
+      "accepted_accuracy": 0.9588235294117647
+    },
+    {
+      "margin_threshold": 0.75,
+      "accepted": 162,
+      "coverage": 0.9,
+      "accepted_accuracy": 0.9691358024691358
+    },
+    {
+      "margin_threshold": 1.0,
+      "accepted": 151,
+      "coverage": 0.8388888888888889,
+      "accepted_accuracy": 0.9801324503311258
+    }
+  ],
+  "policy": "accept only when SVM top-two decision margin meets threshold; otherwise clarify or review"
+}

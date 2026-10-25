@@ -1,0 +1,624 @@
+{
+  "version": "bitext-v2",
+  "status": "frozen",
+  "entries": [
+    {
+      "id": "refund.policy",
+      "domain": "refund",
+      "name": "Refund policy and eligibility",
+      "definition": "User asks about refund rules, eligibility, or money-back conditions.",
+      "include_when": [
+        "The user asks about refund policy."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I need help to see your refund policy",
+        "I want help to see your refund policy",
+        "I need help seeing your refund policy",
+        "I want to check your reimbursement policy, help me",
+        "I want to check your reimbursement policy",
+        "help me check in what cases can I request my money back",
+        "help to see in which cases can i request my money back",
+        "help me to see in which cases can i ask for my money back",
+        "I want help to see in which cases can I ask for refunds",
+        "i want help to check in what cases can i request refunds"
+      ]
+    },
+    {
+      "id": "account.update",
+      "domain": "account",
+      "name": "Update account information",
+      "definition": "User asks to modify information on an existing account or user profile.",
+      "include_when": [
+        "The user asks about update account."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help me to use the {{Account Category}} profile",
+        "modify information on {{Account Category}} account",
+        "modify info on {{Account Type}} account",
+        "need help to modify my user information",
+        "I want help to modify my user details",
+        "can you help me to modify my user information?"
+      ]
+    },
+    {
+      "id": "order.modify",
+      "domain": "order",
+      "name": "Modify order",
+      "definition": "User asks to add, remove, swap, or otherwise change an existing order.",
+      "include_when": [
+        "The user asks about modify order."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "change order {{Order Number}}",
+        "change  order {{Order Number}}",
+        "help me change purchase {{Order Number}}",
+        "how do I modify purchase {{Order Number}}?",
+        "I need assistance with adding an item to order {{Order Number}}",
+        "need to add some items to order {{Order Number}}",
+        "how do I add some items to order {{Order Number}} ?",
+        "help me to delete an item from order {{Order Number}}",
+        "help with deleting an item from order {{Order Number}}",
+        "assistance to remove an item from order {{Order Number}}"
+      ]
+    },
+    {
+      "id": "account.early_exit_fee",
+      "domain": "account",
+      "name": "Early-exit and cancellation fee",
+      "definition": "User asks about a charge or fee associated with cancelling or ending an account or service early.",
+      "include_when": [
+        "The user asks about early exit fee."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i want help to see the early termination charge",
+        "help me check the early termination fees",
+        "I want help to check the early termination charges",
+        "I need assistance checkng the early exit penalties",
+        "I  want help checking the early exit penalties",
+        "I want help to see the cancellation charges",
+        "i need help to see the cancellation charges",
+        "I need help to see the cancellation charges"
+      ]
+    },
+    {
+      "id": "invoice.retrieve",
+      "domain": "invoice",
+      "name": "Retrieve invoice",
+      "definition": "User wants to locate an invoice in the account.",
+      "include_when": [
+        "The user asks about invoice lookup."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "how can i get my invoice from {{Person Name}}",
+        "help me to get my invoices from {{Person Name}}",
+        "I do not know how I can get my invoice from {{Person Name}}",
+        "i need help to get my invoice #00108",
+        "I don't know what I have to do to look for invoice #00108"
+      ]
+    },
+    {
+      "id": "security.recover_password",
+      "domain": "security",
+      "name": "Recover password",
+      "definition": "User cannot access an account and needs to recover or reset a password or PIN.",
+      "include_when": [
+        "The user asks about password recovery."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "how do i recover the pin code of my user account",
+        "what do I need to do to recover my user account PIN code?",
+        "what do i need to do to recover my user account pin code",
+        "I need help to reset the pwd of my user account",
+        "what do i have to do to restore the pwd of my user account"
+      ]
+    },
+    {
+      "id": "support.contact_human",
+      "domain": "support",
+      "name": "Contact human support",
+      "definition": "User asks to speak with a human support agent or operator.",
+      "include_when": [
+        "The user asks about human support."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i do not know what i need to do to talk with a human agent",
+        "i do not know how i can talk to a human agent",
+        "I don't know what I need to do to speak with a human agent",
+        "I need to talk to a operator",
+        "I want help to talk to an operator"
+      ]
+    },
+    {
+      "id": "refund.processing_time",
+      "domain": "refund",
+      "name": "Refund processing time",
+      "definition": "User asks how long a refund or reimbursement will take.",
+      "include_when": [
+        "The user asks about refund timing."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i want help to check how long reimbursements take",
+        "I want help to check how long reimbursements take",
+        "I need to see how long reimbursements take",
+        "i need assistance to check how long refunds take",
+        "I need help to see how long refunds take"
+      ]
+    },
+    {
+      "id": "refund.status",
+      "domain": "refund",
+      "name": "Refund status",
+      "definition": "User asks about the status of a specific refund or reimbursement.",
+      "include_when": [
+        "The user asks about refund status."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "want help to check the restitution status",
+        "how can I check the status of the restitution?",
+        "I need assistance seeing the restitution status",
+        "i need help to see my compensation status",
+        "i want help to see the status of my compensation"
+      ]
+    },
+    {
+      "id": "refund.request",
+      "domain": "refund",
+      "name": "Request refund",
+      "definition": "User asks to receive money back for a purchase or transaction.",
+      "include_when": [
+        "The user asks about refund request."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i expect a refund of {{Currency Symbol}}{{Refund Amount}}",
+        "I expect a refund of {{Currency Symbol}}{{Refund Amount}}",
+        "I need help to receive a compensation of money",
+        "I do not know how I could request compensations of money",
+        "want help to obtain a compensation of money"
+      ]
+    },
+    {
+      "id": "delivery.availability",
+      "domain": "delivery",
+      "name": "Delivery availability",
+      "definition": "User asks whether orders can be delivered to a country or city.",
+      "include_when": [
+        "The user asks about delivery availability."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "could I place an order from {{Delivery Country}}?",
+        "could I place an order from {{Delivery Country}} ?",
+        "can I place an order from {{Delivery Country}}?",
+        "is it possible to place an order from {{Delivery City}}",
+        "is it possible to order from {{Delivery City}}?"
+      ]
+    },
+    {
+      "id": "delivery.address_change",
+      "domain": "delivery",
+      "name": "Change delivery address",
+      "definition": "User asks to change the address for an existing delivery.",
+      "include_when": [
+        "The user asks about delivery address."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i need assistance to set the new delivery address up",
+        "i want assistance seting my new delivery address up",
+        "I'm trying to set another delivery address up",
+        "i want assistance trying to update my address",
+        "I need assistance to modify my address"
+      ]
+    },
+    {
+      "id": "order.status",
+      "domain": "order",
+      "name": "Order status",
+      "definition": "User asks for the current status of an order or purchase.",
+      "include_when": [
+        "The user asks about order status."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help to see order {{Order Number}} status",
+        "help me to check the current status of order {{Order Number}}",
+        "need to see purchase {{Order Number}} status",
+        "help me see purchase {{Order Number}} status"
+      ]
+    },
+    {
+      "id": "order.delivery_estimate",
+      "domain": "order",
+      "name": "Delivery estimate",
+      "definition": "User asks when an order or purchase is expected to arrive.",
+      "include_when": [
+        "The user asks about delivery estimate."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i want assistance to see the eta of order {{Order Number}}",
+        "I want help to see the ETA of order {{Order Number}}",
+        "i want assistance to see the ETA of the order {{Order Number}}",
+        "help me check the eta of purchase {{Order Number}}",
+        "help me to check the eta of the purchase {{Order Number}}"
+      ]
+    },
+    {
+      "id": "order.track",
+      "domain": "order",
+      "name": "Track order",
+      "definition": "User asks how to locate or track an existing order or shipment.",
+      "include_when": [
+        "The user asks about order tracking."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "where do I track purchase {{Order Number}}?",
+        "how do I track purchase {{Order Number}}?",
+        "I'd like to track purchase {{Order Number}} i need assistance",
+        "how to locate order {{Order Number}}?",
+        "how do I locate order {{Order Number}}?"
+      ]
+    },
+    {
+      "id": "order.cancel",
+      "domain": "order",
+      "name": "Cancel order",
+      "definition": "User asks to cancel an existing order or purchase.",
+      "include_when": [
+        "The user asks about cancel order."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I can no longer afford purchase {{Order Number}}",
+        "I need assistance with canceling order {{Order Number}}",
+        "i need assistance with canceling order {{Order Number}}",
+        "have a problem with cancelling purchase {{Order Number}}",
+        "I have a problem with cancelling purchase {{Order Number}}"
+      ]
+    },
+    {
+      "id": "account.delete",
+      "domain": "account",
+      "name": "Delete account",
+      "definition": "User asks to close or delete an account.",
+      "include_when": [
+        "The user asks about delete account."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "what do i have to do to remove a {{Account Category}} account",
+        "what do i need to do to remove the {{Account Category}} account",
+        "deleting {{Account Category}} account",
+        "can you help me cancelling the {{Account Category}} account?",
+        "canceling {{Account Category}} account"
+      ]
+    },
+    {
+      "id": "account.create",
+      "domain": "account",
+      "name": "Create account",
+      "definition": "User asks to open or create a new account.",
+      "include_when": [
+        "The user asks about create account."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help me to open a {{Account Type}} account",
+        "I want to open an {{Account Type}} account",
+        "I need to open a {{Account Type}} account",
+        "need to create an {{Account Type}} account",
+        "help me create a {{Account Type}} account"
+      ]
+    },
+    {
+      "id": "account.change_plan",
+      "domain": "account",
+      "name": "Change account plan",
+      "definition": "User asks to change the account plan or tier.",
+      "include_when": [
+        "The user asks about change plan."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "change to gold account",
+        "change to the gold account",
+        "modify gold account",
+        "help me change to the standard account",
+        "help to change to the standard account"
+      ]
+    },
+    {
+      "id": "invoice.download",
+      "domain": "invoice",
+      "name": "Download invoice",
+      "definition": "User wants to download or obtain an invoice document.",
+      "include_when": [
+        "The user asks about invoice download."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I do not know what to do to download my invoice #12588",
+        "i do not know what to do to download my invoice #12588",
+        "i dont know how i can download my invoice #12588",
+        "how to get my bill from {{Person Name}} ?",
+        "help to get my bill from {{Person Name}}"
+      ]
+    },
+    {
+      "id": "payment.methods",
+      "domain": "payment",
+      "name": "Payment methods",
+      "definition": "User asks which payment methods or options are accepted.",
+      "include_when": [
+        "The user asks about payment methods."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "could you help me to see what payment methods are accepted?",
+        "I want to see what payment options are accepted, help me",
+        "I need assistance to see your allowed payment methods"
+      ]
+    },
+    {
+      "id": "subscription.unsubscribe",
+      "domain": "subscription",
+      "name": "Unsubscribe newsletter",
+      "definition": "User asks to unsubscribe from a company newsletter.",
+      "include_when": [
+        "The user asks about newsletter unsubscribe."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help me to unsubscribe to your company newsletter",
+        "can you help me to unsubscribe to your corporate newsletter?",
+        "can you help me to unsubscribe to the corporate newsletter?"
+      ]
+    },
+    {
+      "id": "payment.withdrawal_fee",
+      "domain": "payment",
+      "name": "Withdrawal charge",
+      "definition": "User asks about a fee charged for withdrawing money.",
+      "include_when": [
+        "The user asks about withdrawal charge."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I want to see the withdrawal charge, I need help",
+        "help me to check the withdrawal charges",
+        "I need help  checking the withdrawal charges"
+      ]
+    },
+    {
+      "id": "security.recover_access_key",
+      "domain": "security",
+      "name": "Recover account access key",
+      "definition": "User asks to recover an account access key or profile key.",
+      "include_when": [
+        "The user asks about access key."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I want help to recover my user profile access key",
+        "help me to restore the access key of my user profile",
+        "I don't know how I could recover my user profile access key"
+      ]
+    },
+    {
+      "id": "support.hours",
+      "domain": "support",
+      "name": "Support hours",
+      "definition": "User asks when customer support can be contacted.",
+      "include_when": [
+        "The user asks about support hours."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help me see what hours I can call customer support",
+        "help me seeing what hours I can call customer support",
+        "I want help to see what hours I can call customer support"
+      ]
+    },
+    {
+      "id": "payment.issue",
+      "domain": "payment",
+      "name": "Payment problem",
+      "definition": "User reports a problem or needs help with a payment.",
+      "include_when": [
+        "The user asks about payment issue."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "need help to notify of problems with payment",
+        "I want help to notify of issues with payment",
+        "how could I report problems with payment?"
+      ]
+    },
+    {
+      "id": "complaint.file",
+      "domain": "complaint",
+      "name": "File complaint",
+      "definition": "User wants to file a complaint against the company.",
+      "include_when": [
+        "The user asks about complaint."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I'm trying to lodge a customer claim against ur organization",
+        "need help to make a customer claim against ur company",
+        "can you help me make a customer claim against your company?",
+        "want help making a reclamation against ur company",
+        "want help to lodge a customer reclamation"
+      ]
+    },
+    {
+      "id": "support.feedback",
+      "domain": "support",
+      "name": "Submit feedback",
+      "definition": "User wants to submit feedback about a service or experience.",
+      "include_when": [
+        "The user asks about feedback."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "i need help to submit my feedback for a service",
+        "i want help submitting my feedback about a service",
+        "I want assistance to leave feedback about a product"
+      ]
+    },
+    {
+      "id": "order.purchase_products",
+      "domain": "order",
+      "name": "Purchase products",
+      "definition": "User asks for help purchasing one or more products.",
+      "include_when": [
+        "The user asks about purchase products."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "assistance to purchase a few of your product",
+        "assistance to buy several of your product",
+        "how to purchase a few of your item?",
+        "I need assistance to buy several articles",
+        "I want help buying several articles"
+      ]
+    },
+    {
+      "id": "delivery.methods",
+      "domain": "delivery",
+      "name": "Shipping methods",
+      "definition": "User asks which shipping or delivery methods are available.",
+      "include_when": [
+        "The user asks about shipping methods."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "how do I see what shipping methods you offer?",
+        "I need assistance seeing what shipment methods are available",
+        "I want to check what shipment methods you offer"
+      ]
+    },
+    {
+      "id": "account.registration_problem",
+      "domain": "account",
+      "name": "Registration problem",
+      "definition": "User reports a problem signing up or registering.",
+      "include_when": [
+        "The user asks about registration problem."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "I want assistance to notify of problems with signup",
+        "I want help to notify of problems with a sign-up",
+        "I need assistance to notify of problems with a sign-up",
+        "I have  to notify of problems with a registration",
+        "help me to inform of a registration issue"
+      ]
+    },
+    {
+      "id": "account.use_plan",
+      "domain": "account",
+      "name": "Use account plan",
+      "definition": "User asks how to use or understand an account plan.",
+      "include_when": [
+        "The user asks about account plan."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help to use the freemium account",
+        "change to freemium account",
+        "assistance to change to the freemium account"
+      ]
+    },
+    {
+      "id": "account.use_profile",
+      "domain": "account",
+      "name": "Use account profile",
+      "definition": "User asks how to use an account profile.",
+      "include_when": [
+        "The user asks about account profile."
+      ],
+      "exclude_when": [
+        "Requests whose primary goal is a different support action."
+      ],
+      "examples": [
+        "help me to use the {{Account Type}} profile"
+      ]
+    }
+  ]
+}

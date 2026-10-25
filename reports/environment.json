@@ -1,0 +1,24 @@
+{
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "executable": "/Users/jolinzhou/Documents/Project/automated-techsupport-ticketing-with-ClassfierAndDeepAgent/.venv/bin/python",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "cpu": "Apple M5",
+  "logical_cpu_count": "10",
+  "memory_bytes": "17179869184",
+  "mps": {
+    "available": true,
+    "built": true,
+    "tensor_smoke_passed": true
+  },
+  "cuda_available": false,
+  "packages": {
+    "pydantic": "2.13.5",
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.0",
+    "pytest": "9.1.1",
+    "torch": "2.14.0"
+  }
+}

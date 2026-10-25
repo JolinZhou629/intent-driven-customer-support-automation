@@ -1,0 +1,17 @@
+model_name: distilbert-base-uncased
+catalog_version: bitext-v2
+max_length: 128
+learning_rate: 0.00002
+weight_decay: 0.01
+effective_batch_size: 16
+epochs: 3
+warmup_ratio: 0.1
+seed: 42
+early_stopping_metric: eval_macro_f1
+source_train_labels: data/annotations/teacher-v2/review-500-final.jsonl
+source_local_labels: data/annotations/local-v1/train.jsonl
+train_tickets: data/splits/bitext-v1/blind/train/tickets.jsonl
+dev_selection_tickets: data/splits/bitext-v1/blind/dev_selection/tickets.jsonl
+dev_calibration_tickets: data/splits/bitext-v1/blind/dev_calibration/tickets.jsonl
+final_test_tickets: data/splits/bitext-v1/sealed/test/tickets.jsonl
+output_dir: artifacts/classifier-transformer-v1

@@ -1,0 +1,91 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ticket_id": {
+      "minLength": 1,
+      "title": "Ticket Id",
+      "type": "string"
+    },
+    "catalog_version": {
+      "minLength": 1,
+      "title": "Catalog Version",
+      "type": "string"
+    },
+    "intent_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Intent Id"
+    },
+    "status": {
+      "enum": [
+        "resolved",
+        "abstained",
+        "unresolved"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "teacher",
+        "human"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "annotator_id": {
+      "minLength": 1,
+      "title": "Annotator Id",
+      "type": "string"
+    },
+    "annotation_version": {
+      "minLength": 1,
+      "title": "Annotation Version",
+      "type": "string"
+    },
+    "model_version": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model Version"
+    },
+    "prompt_version": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Prompt Version"
+    }
+  },
+  "required": [
+    "ticket_id",
+    "catalog_version",
+    "intent_id",
+    "status",
+    "source",
+    "annotator_id",
+    "annotation_version"
+  ],
+  "title": "Annotation",
+  "type": "object"
+}

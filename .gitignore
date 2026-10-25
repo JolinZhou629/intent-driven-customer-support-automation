@@ -1,0 +1,16 @@
+# Raw and derived datasets must not enter source control.
+data/**
+!data/manifests/
+!data/manifests/**
+# Local credentials and model outputs
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+artifacts/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+reports/runs/
+.DS_Store

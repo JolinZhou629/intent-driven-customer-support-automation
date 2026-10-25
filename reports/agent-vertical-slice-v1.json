@@ -1,0 +1,60 @@
+{
+  "scenarios": 9,
+  "passed": 9,
+  "results": [
+    {
+      "id": "order-status-success",
+      "expected": "completed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "id": "order-status-clarify",
+      "expected": "waiting_for_user",
+      "actual": "waiting_for_user",
+      "passed": true
+    },
+    {
+      "id": "order-status-not-found",
+      "expected": "escalated",
+      "actual": "escalated",
+      "passed": true
+    },
+    {
+      "id": "unknown-request",
+      "expected": "escalated",
+      "actual": "escalated",
+      "passed": true
+    },
+    {
+      "id": "refund-status-success",
+      "expected": "completed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "id": "refund-status-clarify",
+      "expected": "waiting_for_user",
+      "actual": "waiting_for_user",
+      "passed": true
+    },
+    {
+      "id": "invoice-retrieval-success",
+      "expected": "completed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "id": "delivery-address-success",
+      "expected": "completed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "id": "delivery-address-not-allowed",
+      "expected": "escalated",
+      "actual": "escalated",
+      "passed": true
+    }
+  ]
+}

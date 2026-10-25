@@ -1,0 +1,25 @@
+version: routing-v1
+decisions:
+  - handle
+  - clarify
+  - escalate
+reason_codes:
+  - accepted_intent
+  - unknown_request
+abstention_causes:
+  - ambiguous_intent
+  - missing_information
+  - unsupported_request
+clarification_outcome:
+  id: unknown.require_more_info
+  type: routing_outcome
+  description: The ticket cannot be assigned safely until the requester supplies missing context.
+  allowed_actions:
+    - ask_clarifying_question
+  tools: []
+catalog_entry: false
+classifier_policy:
+  model: tfidf_linear_svm
+  calibration_report: reports/svm-calibration-v1.json
+  margin_threshold: 0.2
+  action_below_threshold: clarify

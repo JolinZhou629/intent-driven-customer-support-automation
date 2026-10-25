@@ -1,0 +1,21 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ticket_id": {
+      "minLength": 1,
+      "title": "Ticket Id",
+      "type": "string"
+    },
+    "instruction": {
+      "minLength": 1,
+      "title": "Instruction",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ticket_id",
+    "instruction"
+  ],
+  "title": "Ticket",
+  "type": "object"
+}

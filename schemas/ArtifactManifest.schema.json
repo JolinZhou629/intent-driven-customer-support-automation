@@ -1,0 +1,105 @@
+{
+  "$defs": {
+    "ArtifactFile": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "minLength": 1,
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "ArtifactFile",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1",
+      "default": "1",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "model_version": {
+      "minLength": 1,
+      "title": "Model Version",
+      "type": "string"
+    },
+    "catalog_version": {
+      "minLength": 1,
+      "title": "Catalog Version",
+      "type": "string"
+    },
+    "policy_version": {
+      "minLength": 1,
+      "title": "Policy Version",
+      "type": "string"
+    },
+    "preprocessing_version": {
+      "minLength": 1,
+      "title": "Preprocessing Version",
+      "type": "string"
+    },
+    "calibration_version": {
+      "minLength": 1,
+      "title": "Calibration Version",
+      "type": "string"
+    },
+    "run_id": {
+      "minLength": 1,
+      "title": "Run Id",
+      "type": "string"
+    },
+    "dataset_manifest_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Dataset Manifest Sha256",
+      "type": "string"
+    },
+    "config_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Config Sha256",
+      "type": "string"
+    },
+    "label_ids": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Label Ids",
+      "type": "array"
+    },
+    "files": {
+      "items": {
+        "$ref": "#/$defs/ArtifactFile"
+      },
+      "minItems": 1,
+      "title": "Files",
+      "type": "array"
+    }
+  },
+  "required": [
+    "model_version",
+    "catalog_version",
+    "policy_version",
+    "preprocessing_version",
+    "calibration_version",
+    "run_id",
+    "dataset_manifest_sha256",
+    "config_sha256",
+    "label_ids",
+    "files"
+  ],
+  "title": "ArtifactManifest",
+  "type": "object"
+}

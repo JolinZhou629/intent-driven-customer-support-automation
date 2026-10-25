@@ -1,0 +1,134 @@
+{
+  "$defs": {
+    "Candidate": {
+      "additionalProperties": false,
+      "properties": {
+        "intent_id": {
+          "minLength": 1,
+          "title": "Intent Id",
+          "type": "string"
+        },
+        "score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Score",
+          "type": "number"
+        }
+      },
+      "required": [
+        "intent_id",
+        "score"
+      ],
+      "title": "Candidate",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "ticket_id": {
+      "minLength": 1,
+      "title": "Ticket Id",
+      "type": "string"
+    },
+    "intent_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Intent Id"
+    },
+    "domain_id": {
+      "anyOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Domain Id"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "candidates": {
+      "items": {
+        "$ref": "#/$defs/Candidate"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "decision": {
+      "enum": [
+        "handle",
+        "clarify",
+        "escalate"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "reason_code": {
+      "minLength": 1,
+      "title": "Reason Code",
+      "type": "string"
+    },
+    "missing_information": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "title": "Missing Information",
+      "type": "array"
+    },
+    "clarification_question": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clarification Question"
+    },
+    "catalog_version": {
+      "minLength": 1,
+      "title": "Catalog Version",
+      "type": "string"
+    },
+    "model_version": {
+      "minLength": 1,
+      "title": "Model Version",
+      "type": "string"
+    },
+    "policy_version": {
+      "minLength": 1,
+      "title": "Policy Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ticket_id",
+    "intent_id",
+    "domain_id",
+    "confidence",
+    "candidates",
+    "decision",
+    "reason_code",
+    "catalog_version",
+    "model_version",
+    "policy_version"
+  ],
+  "title": "ClassifierOutput",
+  "type": "object"
+}

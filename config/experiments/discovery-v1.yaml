@@ -1,0 +1,17 @@
+experiment_id: discovery-v1
+encoder_manifest: config/encoder-manifest.json
+split_root: data/splits/bitext-v1
+partition: train
+batch_size: 64
+device: cpu
+normalize_embeddings: true
+seeds: [42]
+umap_dimensions: []
+umap_neighbors: 15
+umap_min_dist: 0.0
+umap_metric: cosine
+hdbscan_metric: euclidean
+min_cluster_sizes: [30, 60, 120]
+min_samples: 10
+silhouette_sample_size: 2000
+selection: coverage_times_positive_original_cosine_silhouette; no UMAP smoke sweep for initial baseline; human review required

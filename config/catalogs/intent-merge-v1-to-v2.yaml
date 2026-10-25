@@ -1,0 +1,11 @@
+version: bitext-v2
+merges:
+  refund.policy: [refund.policy, refund.eligibility, refund.money_back_guarantee]
+  account.update: [account.update, account.update_user_information]
+  order.modify: [order.modify, order.add_item, order.remove_item, order.swap_item]
+  account.early_exit_fee: [account.early_exit_fee, payment.cancellation_charge]
+notes:
+  - Refund policy, eligibility, and money-back guarantee share the same policy explanation workflow.
+  - Account and user-information updates use the same account-update workflow.
+  - Add, remove, swap, and edit are operations under one order-modification workflow.
+  - Cancellation and early-exit charges are handled by the same fee-policy workflow.

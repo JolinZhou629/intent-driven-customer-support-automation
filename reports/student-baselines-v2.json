@@ -1,0 +1,18 @@
+{
+  "train_size": 7510,
+  "teacher_train": 447,
+  "local_conservative_train": 7063,
+  "reviewed_test_size": 447,
+  "models": {
+    "tfidf_logreg": {
+      "accuracy": 0.9351230425055929,
+      "macro_f1": 0.872165840713883,
+      "weighted_f1": 0.9357845991078109
+    },
+    "tfidf_linear_svm": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0
+    }
+  }
+}

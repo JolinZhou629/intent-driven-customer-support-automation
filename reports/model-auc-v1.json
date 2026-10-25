@@ -1,0 +1,14 @@
+{
+  "dev_selection": {
+    "logistic_regression": 0.9863268616405543,
+    "linear_svm": 0.9843230293530578,
+    "distilbert": 0.979917698306708,
+    "classes_present": 30
+  },
+  "dev_calibration": {
+    "logistic_regression": 0.9975373794757854,
+    "linear_svm": 0.9988926099556514,
+    "distilbert": 0.9958257453469318,
+    "classes_present": 30
+  }
+}

@@ -1,0 +1,52 @@
+experiment_id: classifier-v1
+stage: foundation
+seed: 42
+dataset:
+  source_manifest: data/manifests/bitext-source.json
+  revision: 430d1a89bd93bd1fa23c16f29dd53e73f0087443
+  split_ratios: {train: 0.70, development: 0.15, test: 0.15}
+  group_duplicates: true
+  development_selection_fraction: 0.5
+  blind_features: [instruction]
+discovery:
+  encoder: sentence-transformers/all-MiniLM-L6-v2
+  encoder_revision: null # Must resolve and pin before downloading/embedding.
+  seeds: [42, 43, 44]
+  umap_dimensions: [null, 15, 30]
+  min_cluster_sizes: [30, 60, 120]
+  min_samples: 10
+  catalog_revision_budget: 3
+teacher:
+  provider: openai
+  model: gpt-5-mini
+  temperature: 0
+  budget_usd: 2.00
+  prompt_version: teacher-v1
+  pilot_size: 100
+  max_retries: 2
+review:
+  human_training_pilot: 100
+  development_examples_per_intent: 20
+  disagreement_rounds: 1
+students:
+  candidates: [tfidf_logreg, tfidf_linear_svm, frozen_embeddings_logreg]
+  word_ngram_range: [1, 2]
+  char_analyzer: char_wb
+  char_ngram_range: [3, 5]
+  min_document_frequencies: [1, 2]
+  regularization_c: [0.1, 1.0, 10.0]
+  transformer:
+    enabled: false
+    model: distilbert-base-uncased
+    revision: null
+    learning_rate: 0.00002
+    effective_batch_size: 16
+    max_epochs: 3
+routing_objectives:
+  accepted_accuracy: 0.95
+  coverage: 0.80
+  unknown_rejection: 0.90
+  calibrated_threshold: null # Objectives are not routing thresholds.
+runtime:
+  default_device: cpu
+  report_root: reports/runs

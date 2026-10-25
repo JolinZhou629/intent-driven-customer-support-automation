@@ -1,0 +1,29 @@
+flowchart LR
+  subgraph TRAIN[Training and model creation]
+    D[Public Bitext tickets] --> C[Clean text and remove duplicates]
+    C --> S[Grouped train/dev/calibration/test split]
+    S --> E[MiniLM sentence embeddings]
+    E --> H[HDBSCAN intent discovery]
+    H --> R[Review clusters and merge overlaps]
+    R --> CAT[Frozen bitext-v2 catalog]
+    CAT --> L[Local-first labels]
+    L --> T[Teacher review for uncertain cases]
+    T --> Y[Resolved training labels]
+    Y --> M[TF-IDF features]
+    M --> LR[Logistic regression]
+    M --> SVM[Linear SVM]
+    LR --> V[Development evaluation and calibration]
+    SVM --> V
+    V --> B[Packaged classifier-v2 bundle]
+  end
+
+  subgraph PRED[Prediction and handoff]
+    X[New support ticket] --> P[Shared preprocessing]
+    P --> Q[Classifier inference]
+    Q --> G{Confidence and margin policy}
+    G -->|accepted| I[Intent, domain, confidence]
+    G -->|unclear| U[unknown.require_more_info]
+    I --> A[Deep-agent handoff]
+  end
+
+  B -. reload at runtime .-> Q

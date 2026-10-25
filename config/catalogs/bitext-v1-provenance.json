@@ -1,0 +1,183 @@
+{
+  "source": "config/catalogs/bitext-v0.3-draft.json",
+  "status": "frozen",
+  "source_mapping": [
+    {
+      "source_id": "invoice.retrieve",
+      "frozen_id": "invoice.retrieve"
+    },
+    {
+      "source_id": "security.recover_password",
+      "frozen_id": "security.recover_password"
+    },
+    {
+      "source_id": "support.contact_human",
+      "frozen_id": "support.contact_human"
+    },
+    {
+      "source_id": "refund.processing_time",
+      "frozen_id": "refund.processing_time"
+    },
+    {
+      "source_id": "refund.status",
+      "frozen_id": "refund.status"
+    },
+    {
+      "source_id": "refund.request",
+      "frozen_id": "refund.request"
+    },
+    {
+      "source_id": "refund.policy",
+      "frozen_id": "refund.policy"
+    },
+    {
+      "source_id": "refund.eligibility",
+      "frozen_id": "refund.eligibility"
+    },
+    {
+      "source_id": "delivery.availability",
+      "frozen_id": "delivery.availability"
+    },
+    {
+      "source_id": "delivery.address_change",
+      "frozen_id": "delivery.address_change"
+    },
+    {
+      "source_id": "order.status",
+      "frozen_id": "order.status"
+    },
+    {
+      "source_id": "order.delivery_estimate",
+      "frozen_id": "order.delivery_estimate"
+    },
+    {
+      "source_id": "order.track",
+      "frozen_id": "order.track"
+    },
+    {
+      "source_id": "order.add_item",
+      "frozen_id": "order.add_item"
+    },
+    {
+      "source_id": "order.cancel",
+      "frozen_id": "order.cancel"
+    },
+    {
+      "source_id": "order.modify",
+      "frozen_id": "order.modify"
+    },
+    {
+      "source_id": "account.delete",
+      "frozen_id": "account.delete"
+    },
+    {
+      "source_id": "account.create",
+      "frozen_id": "account.create"
+    },
+    {
+      "source_id": "account.update",
+      "frozen_id": "account.update"
+    },
+    {
+      "source_id": "account.change_plan",
+      "frozen_id": "account.change_plan"
+    },
+    {
+      "source_id": "account.early_exit_fee",
+      "frozen_id": "account.early_exit_fee"
+    },
+    {
+      "source_id": "invoice.download",
+      "frozen_id": "invoice.download"
+    },
+    {
+      "source_id": "payment.methods",
+      "frozen_id": "payment.methods"
+    },
+    {
+      "source_id": "general.newsletter",
+      "frozen_id": "subscription.unsubscribe"
+    },
+    {
+      "source_id": "payment.cancel",
+      "frozen_id": "payment.cancellation_charge"
+    },
+    {
+      "source_id": "payment.withdrawal_charge",
+      "frozen_id": "payment.withdrawal_fee"
+    },
+    {
+      "source_id": "account.key",
+      "frozen_id": "security.recover_access_key"
+    },
+    {
+      "source_id": "general.what",
+      "frozen_id": "support.hours"
+    },
+    {
+      "source_id": "payment.payment_info",
+      "frozen_id": "payment.issue"
+    },
+    {
+      "source_id": "general.rebate",
+      "frozen_id": "refund.request"
+    },
+    {
+      "source_id": "general.back",
+      "frozen_id": "refund.money_back_guarantee"
+    },
+    {
+      "source_id": "complaint.against",
+      "frozen_id": "complaint.file"
+    },
+    {
+      "source_id": "complaint.reclamation",
+      "frozen_id": "complaint.file"
+    },
+    {
+      "source_id": "support.feedback",
+      "frozen_id": "support.feedback"
+    },
+    {
+      "source_id": "general.assistance",
+      "frozen_id": "order.purchase_products"
+    },
+    {
+      "source_id": "delivery.what",
+      "frozen_id": "delivery.methods"
+    },
+    {
+      "source_id": "general.articles",
+      "frozen_id": "order.purchase_products"
+    },
+    {
+      "source_id": "security.with",
+      "frozen_id": "account.registration_problem"
+    },
+    {
+      "source_id": "general.registration",
+      "frozen_id": "account.registration_problem"
+    },
+    {
+      "source_id": "account.freemium",
+      "frozen_id": "account.use_plan"
+    },
+    {
+      "source_id": "order.order",
+      "frozen_id": "order.remove_item"
+    },
+    {
+      "source_id": "general.user",
+      "frozen_id": "account.update_user_information"
+    },
+    {
+      "source_id": "order.swap_item",
+      "frozen_id": "order.swap_item"
+    },
+    {
+      "source_id": "account.the",
+      "frozen_id": "account.use_profile"
+    }
+  ],
+  "entries": 40
+}
